@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Form</title>
+  
+   <style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+ header,
+ main,
+ footer {
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 0.75rem 1rem;
+     /* 🔹 Diperpendek padding */
+ }
+
+ header {
+     background: white;
+     border-bottom: 1px solid #e6e6e9;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ h1 {
+     margin: 0 0 .5rem;
+     font-size: 1.5rem;
+ }
+
+ section {
+     background: white;
+     border: 1px solid #e6e6e9;
+     border-radius: .75rem;
+     padding: 1rem 1.5rem;
+     margin: 0.75rem 0;
+     /* 🔹 Jarak antar section dikurangi */
+ }
+
+ fieldset {
+     border: 1px solid #dcdce0;
+     border-radius: .5rem;
+     padding: 1rem 1.25rem;
+     margin-bottom: 1rem;
+ }
+
+ legend {
+     padding: 0 .5rem;
+     font-weight: 600;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: var(--gap);
+     margin-bottom: -10px;
+     
+ }
+
+ .row {
+     display: grid;
+     grid-template-columns: 180px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="tel"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="range"] {
+     /*width: 100%;
+     max-width: 500px;*/
+     padding: .55rem .6rem;
+     border: 1px solid #cfd3d8;
+     border-radius: .5rem;
+     background: #fff;
+     box-sizing: border-box;
+ }
+.product{}
+
+.quantity{}
+
+ input[type="color"] {
+     padding: 0;
+     height: 2.25rem;
+ }
+
+ textarea {
+     min-height: 90px;
+ }
+
+ .actions {
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+     margin-top: .75rem;
+     /* 🔹 Diperpendek sedikit */
+ }
+
+ button,
+ input[type="submit"],
+ input[type="reset"] {
+     border: 1px solid #1e88e5;
+     background: #2196f3;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .5rem;
+     cursor: pointer;
+     /*⬇️ atribut tambahan*/
+     display:block;
+     margin:15px auto;
+     width:auto;
+     padding:10px 25px;
+ }
+
+ input[type="reset"] {
+     border-color: #9e9e9e;
+     background: #bdbdbd;
+ }
+
+ footer {
+     color: #666;
+     font-size: .9rem;
+     text-align: center;
+     padding-top: .5rem;
+     /* 🔹 Jarak atas footer diperpendek */
+ /*⬇️atribut tambahan*/
+ }
+ .form-row {
+   display:grid;
+   grid-template-columns:1fr 1fr ;
+   gap:15px;
+   margin-bottom:15px;
+ }
+ .apacoba{
+      display: flex;
+      align-items: center;
+      gap: 200px; /* jarak antara product dan quantity */
+      margin-bottom: 15px;
+    }
+ 
+ .form-group {
+   display:flex;
+   flex-direction: column;
+   gap:20px;
+ }
+ /*⬇️ atribut tambahan*/
+ .checkbox-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;   /*dua kolom*/
+
+ @media (max-width: 720px) {
+
+     header,
+     main,
+     footer {
+         padding: 0.75rem;
+     }
+
+     section {
+         padding: 1rem;
+         margin: 0.75rem 0.5rem;
+     }
+
+     fieldset {
+         padding: 1rem;
+     }
+
+     .row {
+         grid-template-columns: 1fr;
+         gap: .5rem;
+     }
+
+     input,
+     select,
+     textarea {
+         max-width: 100%;
+     }
+
+     .actions {
+         justify-content: center;
+     }
+ }
+
+ </style>
+</head>
+<body>
+ <main>
+   <section>
+     <h1>Order Form</h1>
+     <br>
+     <div class="grid">
+       <label style="margin-bottom:-10px">Name</label>
+       <input type="text" placeholder="Naufal" required="">
+     </div>
+     <br>
+     <div class="form-row">
+       <div class="form-group">
+         <label style="margin-bottom:-15px">Email</label>
+         <input type="email" placeholder="naufalzr0102@gmail.com"required="" size="13px">
+       </div>
+       <div class="form-group">
+         <label style="margin-bottom:-15px">Phone</label>
+         <input type="text" placeholder="+62 895 1445 5428" size="5px" required="">
+       </div>
+     </div>
+
+     <h3>Order Details</h3>
+     <label>Product</label>
+     <div class="apacoba">
+       <div class="form-row">
+         <select style="width:230px">
+         <option>Select a product</option>
+         <option>Cucur Adadabi</option>
+         <option>Milo Ais</option>
+         <option>Kopi mantap sayang</option>
+         </div> 
+       
+       <div>
+         <label>Quantity</label>
+         <input type="number" placeholder="1" required="" style="width:50px;" value="1" min="1">
+       </div>
+     </div>
+     
+     <b>Size</b>
+     <div class="checkbox-grid">
+       <label><input type="checkbox">Small</label>
+       <label><input type="checkbox">Medium</label>
+       <label><input type="checkbox">Large</label>
+       <label><input type="checkbox">XL</label>
+     </div>
+     
+     <br>
+     <b>Color</b>
+     <div class="checkbox-grid">
+       <label><input type="checkbox">Red</label>
+       <label><input type="checkbox">Blue</label>
+       <label><input type="checkbox">Green</label>
+       <label><input type="checkbox">Black</label>
+     </div>
+     <br>
+     
+     <div class="grid">
+       <label>Additional Comments</label>
+     <textarea placeholder="Enter any additional comments or instuctions"></textarea>
+     </div>
+     
+     <h3>Payment Details</h3>
+     <div class="grid">
+       <label>Payment Method</label>
+       <select>
+         <option>Select a payment method</option>
+         <option>CASH</option>
+         <option>QRIS</option>
+         <option>TRANSFER</option>
+         <option>EDC</option>
+       </select>
+     </div>
+     <div>
+       <p style="font-size:13px"><input type="checkbox">I accept the terms and conditions.
+       </p>
+     </div>
+     <br>
+     
+     <button>Submit Order</button>
+     
+   </section>
+ </main>
+</body>
+</html>
